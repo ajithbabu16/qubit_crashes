@@ -142,7 +142,9 @@ class MainActivity : FlutterActivity() {
                     }
                     "enterPip" -> {
                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                            val params = android.app.PictureInPictureParams.Builder().build()
+                            val params = android.app.PictureInPictureParams.Builder()
+                                .setAspectRatio(android.util.Rational(1, 1))
+                                .build()
                             enterPictureInPictureMode(params)
                             result.success(true)
                         } else {
@@ -167,6 +169,15 @@ class MainActivity : FlutterActivity() {
                 override fun onListen(a: Any?, sink: EventChannel.EventSink?) { eventSink = sink }
                 override fun onCancel(a: Any?) { eventSink = null }
             })
+    }
+
+    override fun onUserLeaveHint() {
+        val prefs = getSharedPreferences(QubitNotificationListener.PREFS_NAME, MODE_PRIVATE)
+        val isTracking = prefs.getString(QubitNotificationListener.KEY_TARGET_PKG, null) != null
+        if (isTracking && Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val params = android.app.PictureInPictureParams.Builder().build()
+            enterPictureInPictureMode(params)
+        }
     }
 
     override fun onPictureInPictureModeChanged(isInPictureInPictureMode: Boolean, newConfig: android.content.res.Configuration?) {
@@ -261,8 +272,14 @@ class MainActivity : FlutterActivity() {
     }
 
     private fun showForegroundNotification(pkg: String) {
-        // This is just a status bar notification; the actual foreground service
-        // is managed by flutter_local_notifications plugin
+        // Update PiP params to allow 'Auto-Enter' on minimization (Android 12+)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            val params = android.app.PictureInPictureParams.Builder()
+                .setAutoEnterEnabled(true)
+                .setAspectRatio(android.util.Rational(1, 1))
+                .build()
+            setPictureInPictureParams(params)
+        }
     }
 
     // ── UsageStats polling (backup detection for non-MIUI devices) ────────────
