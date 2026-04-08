@@ -1,0 +1,30 @@
+﻿Running Gradle task 'assembleDebug'...                          
+flutter : warning: [options] 
+source value 8 is obsolete 
+and will be removed in a 
+future release
+At line:1 char:1
++ flutter build apk --debug 
+2>&1 | Out-File -Encoding 
+utf8 out.txt; Get ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~
+    + CategoryInfo           
+   : NotSpecified: (warning  
+  : [optio... future relea   
+ se:String) [], RemoteExc    
+eption
+    + FullyQualifiedErrorId  
+   : NativeCommandError
+ 
+warning: [options] target 
+value 8 is obsolete and will 
+be removed in a future 
+release
+warning: [options] To 
+suppress warnings about 
+obsolete options, use 
+-Xlint:-options.
+3 warnings
+Running Gradle task 'assembleDebug'...                             87.1s
+ΓêÜ Built build\app\outputs\flutter-apk\app-debug.apk

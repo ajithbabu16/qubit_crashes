@@ -1,0 +1,71 @@
+﻿Running Gradle task 'assembleRelease'...                        
+flutter : 
+lib/main.dart:150:36: Error: 
+Required named parameter 
+'type' must be provided.
+At line:1 char:1
++ flutter build apk 
+--release 2>&1 | Out-File 
+-Encoding utf8 release_bu ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~
+    + CategoryInfo           
+   : NotSpecified: (lib/mai  
+  n.dart:1...st be provide   
+ d.:String) [], RemoteExc    
+eption
+    + FullyQualifiedErrorId  
+   : NativeCommandError
+ 
+    if (!g) { 
+_showPermissionDialog(); 
+return; }
+                             
+      ^
+lib/main.dart:377:15: Error: 
+The method '_buildLogList' 
+isn't defined for the type 
+'_HomeScreenState'.
+ - '_HomeScreenState' is 
+from 'package:qubit_crashes/m
+ain.dart' ('lib/main.dart').
+Try correcting the name to 
+the name of an existing 
+method, or defining a method 
+named '_buildLogList'.
+        body: 
+_buildLogList(),
+              ^^^^^^^^^^^^^
+Target 
+kernel_snapshot_program 
+failed: Exception
+
+
+FAILURE: Build failed with 
+an exception.
+
+* What went wrong:
+Execution failed for task ':a
+pp:compileFlutterBuildRelease
+'.
+> Process 'command 'C:\Users\
+Babu\flutter_desktop\flutter\
+bin\flutter.bat'' finished 
+with non-zero exit value 1
+
+* Try:
+> Run with --stacktrace 
+option to get the stack 
+trace.
+> Run with --info or --debug 
+option to get more log 
+output.
+> Run with --scan to get 
+full insights.
+> Get more help at 
+https://help.gradle.org.
+
+BUILD FAILED in 14s
+Running Gradle task 'assembleRelease'...                           14.8s
+Gradle task assembleRelease 
+failed with exit code 1

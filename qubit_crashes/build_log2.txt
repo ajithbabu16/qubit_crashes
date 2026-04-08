@@ -1,0 +1,64 @@
+﻿Running Gradle task 'assembleDebug'...                          
+flutter : e: file:///C:/Users
+/Babu/OneDrive/Desktop/Projec
+t/android-mcp-server/qubit_cr
+ashes/android/app/src/main/ko
+tlin/com/example/qubit_crashe
+s/MainActivity.kt:13:27 
+Conflicting import: imported 
+name 'PackageManager' is 
+ambiguous.
+At line:1 char:1
++ flutter build apk --debug 
+2>&1 | Out-File -Encoding 
+utf8 build_log2.t ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~
+    + CategoryInfo           
+   : NotSpecified: (e: file  
+  :///C:/U...' is ambiguou   
+ s.:String) [], RemoteExc    
+eption
+    + FullyQualifiedErrorId  
+   : NativeCommandError
+ 
+e: file:///C:/Users/Babu/OneD
+rive/Desktop/Project/android-
+mcp-server/qubit_crashes/andr
+oid/app/src/main/kotlin/com/e
+xample/qubit_crashes/MainActi
+vity.kt:14:27 Conflicting 
+import: imported name 
+'PackageManager' is 
+ambiguous.
+
+FAILURE: Build failed with 
+an exception.
+
+* What went wrong:
+Execution failed for task 
+':app:compileDebugKotlin'.
+> A failure occurred while 
+executing org.jetbrains.kotli
+n.compilerRunner.GradleCompil
+erRunnerWithWorkers$GradleKot
+linCompilerWorkAction
+   > Compilation error. See 
+log for more details
+
+* Try:
+> Run with --stacktrace 
+option to get the stack 
+trace.
+> Run with --info or --debug 
+option to get more log 
+output.
+> Run with --scan to get 
+full insights.
+> Get more help at 
+https://help.gradle.org.
+
+BUILD FAILED in 3s
+Running Gradle task 'assembleDebug'...                              3.5s
+Gradle task assembleDebug 
+failed with exit code 1

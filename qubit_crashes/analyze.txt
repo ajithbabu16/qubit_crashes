@@ -1,0 +1,29 @@
+﻿Analyzing qubit_crashes...                                      
+
+   info - Unnecessary use of multiple underscores - lib\main.dart:27:26 - unnecessary_underscores
+  error - The argument type 'CardTheme' can't be assigned to the parameter type 'CardThemeData?'.  - lib\main.dart:36:24 - argument_type_not_assignable
+  error - The argument type 'CardTheme' can't be assigned to the parameter type 'CardThemeData?'.  - lib\main.dart:43:24 - argument_type_not_assignable
+warning - Dead code - lib\main.dart:130:52 - dead_code
+warning - The left operand can't be null, so the right operand is never executed - lib\main.dart:130:55 - dead_null_aware_expression
+warning - The left operand can't be null, so the right operand is never executed - lib\main.dart:130:79 - dead_null_aware_expression
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\main.dart:274:60 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\main.dart:308:52 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\main.dart:308:88 - deprecated_member_use
+warning - Dead code - lib\main.dart:389:61 - dead_code
+warning - The left operand can't be null, so the right operand is never executed - lib\main.dart:389:64 - dead_null_aware_expression
+
+flutter : 11 issues found. 
+(ran in 30.6s)
+At line:1 char:1
++ flutter analyze 2>&1 | 
+Out-File -Encoding utf8 
+analyze.txt; Get-Conte ...
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo           
+   : NotSpecified: (11 issu  
+  es found. (ran in 30.6s)   
+ :String) [], RemoteExcep    
+tion
+    + FullyQualifiedErrorId  
+   : NativeCommandError
+ 
